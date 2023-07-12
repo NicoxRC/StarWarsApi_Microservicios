@@ -3,7 +3,7 @@ const controllers = require('../controller');
 
 const router = Router();
 
-router.get('/Charater', controllers.listCharacter);
+router.get('/Character', controllers.listCharacter);
 router.get('/Character/:id', controllers.getCharacter);
 router.get('/Film', controllers.listFilm);
 router.get('/Film/:id', controllers.getFilm);
