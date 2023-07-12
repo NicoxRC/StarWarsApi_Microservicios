@@ -1,5 +1,13 @@
+const { getFilm, listFilm } = require('./films');
+const { getPlanet, listPlanet } = require('./planets');
+const { getCharacter, listCharacter } = require('./characters');
+
 module.exports = {
-  get: require('./get'),
-  list: require('./list'),
+  getCharacter,
+  listCharacter,
+  getFilm,
+  listFilm,
+  getPlanet,
+  listPlanet,
   notFound: require('./notFound'),
 };

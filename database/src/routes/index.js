@@ -3,8 +3,12 @@ const controllers = require('../controller');
 
 const router = Router();
 
-router.get('/:model', controllers.list);
-router.get('/:model/:id', controllers.get);
-// router.use('*', controllers.notFound);
+router.get('/Charater', controllers.listCharacter);
+router.get('/Character/:id', controllers.getCharacter);
+router.get('/Film', controllers.listFilm);
+router.get('/Film/:id', controllers.getFilm);
+router.get('/Planet', controllers.listPlanet);
+router.get('/Planet/:id', controllers.getPlanet);
+router.use('*', controllers.notFound);
 
 module.exports = router;
