@@ -3,13 +3,19 @@ const { MONGO_URI } = require('../config/index');
 
 const connection = mongoose.createConnection(MONGO_URI);
 
-module.exports = {
-  Character: connection.model(
-    'Character',
-    require('../schemas/characterSchema')
-  ),
+const Character = connection.model(
+  'Character',
+  require('../schemas/characterSchema')
+);
+module.exports = Character;
 
-  Film: connection.model('Film', require('../schemas/filmSchema')),
+// module.exports = {
+//   Character: connection.model(
+//     'Character',
+//     require('../schemas/characterSchema')
+//   ),
 
-  Planet: connection.model('Planet', require('../schemas/planetSchema')),
-};
+//   Film: connection.model('Film', require('../schemas/filmSchema')),
+
+//   Planet: connection.model('Planet', require('../schemas/planetSchema')),
+// };

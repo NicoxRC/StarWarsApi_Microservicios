@@ -1,10 +1,11 @@
-const store = require('../connection');
+// const store = require('../connection');
+const Character = require('../connection/index');
 
 module.exports = async (req, res) => {
   try {
     const { model, id } = req.params;
-    // const response = await store[model].get(id);
-    res.status(200).send("response");
+    const response = await Character.findById(id);
+    res.status(200).json(response);
   } catch (error) {
     console.log({ error: error.message });
   }
