@@ -21,7 +21,9 @@ characterSchema.statics.list = async function () {
 };
 
 characterSchema.statics.get = async function (id) {
-  return "hola"
+  return await this.findById(id)
+    .populate('homeworld', ['_id', 'name'])
+    .populate('films', ['_id', 'title']);
 };
 
 module.exports = characterSchema;
