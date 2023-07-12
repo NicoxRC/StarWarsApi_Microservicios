@@ -1,5 +1,5 @@
 const store = require('../connection');
-const Character = require('../connection/index');
+const { Character } = require('../connection/index');
 
 module.exports = async (req, res) => {
   try {
